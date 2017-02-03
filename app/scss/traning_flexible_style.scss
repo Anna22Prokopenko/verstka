@@ -1,0 +1,365 @@
+/* @import "../libs/font-awesome/scss/font-awesome.scss"; */
+/* @font-face {
+    font-family: 'FontAwesome';
+    src: url('../libs/font-awesome/fonts/fontawesome-webfont.eot?v=4.6.3');
+    src: url('../libs/font-awesome/fonts/fontawesome-webfont.eot?#iefix&v=4.6.3') format("embedded-opentype"), url('../libs/font-awesome/fonts/fontawesome-webfont.woff2?v=4.6.3') format("woff2"), url('../libs/font-awesome/fonts/fontawesome-webfont.woff?v=4.6.3') format("woff"), url('../libs/font-awesome/fonts/fontawesome-webfont.ttf?v=4.6.3') format("truetype"), url('../libs/font-awesome/fonts/fontawesome-webfont.svg?v=4.6.3#fontawesomeregular') format("svg");
+    font-weight: normal;
+    font-style: normal;
+} */
+ 
+
+$cnt_width: 63.5%;
+$header_height: 13%;
+$wrapper_height: 67%;
+$footer_height: 20%;
+$nav_height: 21.6%;
+$content_height: 104%;
+$content_width: 82.54%;
+$title_height: 41.278%;
+$viewer_height: 185px;
+$viewer_width: 330px;
+$viewer_margin: 36px 0px;
+$viewer_bg: #f1f1f1;
+$nav_bg: #121821;
+$header_bg: #18202b;
+$footer_bg: #1e2735;
+$bg_block1: #1e2735;
+$bg_block2: white;
+$title_bg: #1e2735;
+$gray_font_color: #74818b;
+
+html, body {
+	width: 100%;
+	height: 100%;
+}
+.cnt {
+	margin: 0 auto;
+	width: $cnt_width;
+	/* border: 1px solid red; */
+	height: inherit;
+}
+.header {
+	height: $header_height;
+	background: $header_bg;
+		.nav {
+			height: $nav_height;
+			background: $nav_bg;
+			border-bottom: 1.9px groove gray;
+				.nav_links {
+					height: 100%;
+					margin-left: 8.73%;
+					margin-right: 6.235%;
+					display: flex;
+					flex-direction: row;
+					flex-wrap: wrap;
+					justify-content: center;
+					align-items: center;
+						p {
+							color: gray;
+							font: 1.4vh Tahoma, sans-serif;
+							margin: 0px;
+							flex-basis: 31%;
+						}
+						.margin_left {
+							margin-left: -1.3%;
+						}
+						a {
+							font: 1.4vh Tahoma, sans-serif;
+							flex-basis: 23%;
+							text-decoration: underline;
+							margin-top: 0.5%;
+							color: $gray_font_color;
+								.a_arrow {
+									font-size: 1vh;
+									margin-right: 1.5%;
+								}
+						}
+				}
+			
+		}
+		.logo {
+			display: inline-block;
+			width: 100%;
+			height: 78.4%;
+			background-color: $header_bg;
+			border-bottom: 2px groove gray;
+			background-image: url("../img/header.png");
+			background-size: 100%;
+			background-repeat: no-repeat;
+			background-position: center;
+		}
+}
+.wrapper {
+	position: relative;
+	height: $wrapper_height;
+		.background {
+			height: 100%;
+				.block1 {
+					background-color: $bg_block1;
+					height: 40%;
+				}
+				.block2 {
+					background-color: $bg_block2;
+					height: 60%;
+				}
+		}
+		.content {
+			height: $content_height;
+			width: $content_width;
+			position: absolute;
+			left: 8.73%;
+			top: 0px;
+			background: #ffffff;
+			overflow: scroll;
+			-webkit-box-shadow: 0px 10px 14px -5px rgba(0,0,0,0.75);
+			-moz-box-shadow: 0px 10px 14px -5px rgba(0,0,0,0.75);
+			box-shadow: 0px 10px 14px -5px rgba(0,0,0,0.75);
+				.title {
+					min-height: $title_height;
+					width: 100%;
+					background: $title_bg;
+					display: flex;
+					flex-direction: row-reverse;
+					flex-wrap: wrap;
+					justify-content: center;
+					align-items: center;
+					align-content: center;
+						.viewer {
+							display: block;
+							height: $viewer_height;
+							flex-basis: $viewer_width;
+							background: $viewer_bg;
+							margin: $viewer_margin;
+						}
+						.description {
+							min-height: 257px;
+							flex-basis: 330px;
+							display: flex;
+							flex-wrap: wrap;
+							justify-content: space-around;
+								h1 {
+									font: bold 22px Tahoma, sans-serif;
+									color: #ffffff;
+									padding-top: 42px;
+									margin: 0px;
+									line-height: 1.2;
+									letter-spacing: 1.5px;
+									flex-basis: 90%;
+								}
+								p {
+									font: 14px Arial, sans-serif;
+									color: $gray_font_color;
+									margin-top: -25px;
+									line-height: 1.46;
+									/* letter-spacing: -0.4px; */
+									flex-basis: 90%;
+								}
+								input {
+									height: 30px;
+									flex-basis: 135px;
+									font: bold 14px Arial, sans-serif;
+									margin-top: -25px; 
+									border-style: none;
+									border-radius: 3px;
+									background: linear-gradient(to top, #d0d0d0, #f6f7f7);
+										&:hover {
+											background: linear-gradient(to top, #abc1df, #dfecfd);
+										}
+								}
+						}
+				}
+				.main {
+					width: 65%;
+					height: 100%;
+					float: left;
+					padding: 0 5%;
+						.first_article {
+							width: 100%;
+								.text {
+									width: 45%;
+									float: left;
+								}
+								.picture_window {
+									display: inline-block;
+									width: 45%;
+									height: 14vw;
+									background: black;
+									float: right;
+								}
+						}
+						.second_article {
+							clear: both;
+							margin-top: 2%;
+							width: 100%;
+							border-top: 2px dotted #cacaca;
+							border-bottom: 2px dotted #cacaca;
+								.picture_window {
+									display: inline-block;
+									width: 100%;
+									height: 11vw;
+									background: black;
+								}
+						}
+						.third_article {
+							clear: both;
+							.picture_window {
+								display: inline-block;
+								width: 45%;
+								height: 14vw;
+								background: black;
+								float: left;
+							}
+							.text {
+								width: 45%;
+								float: right;
+							}
+						}
+						li {
+							text-decoration: underline;
+							border-style: none;
+						}
+				}
+				.aside {
+					width: 35%;
+					height: 100%;
+					float: right;
+					padding-right: 5%;
+						.list {
+							border-bottom: 2px dotted #cacaca;
+						}
+						.widget {
+							border-bottom: 2px dotted #cacaca;
+								.picture_window {
+									display: block;
+									height: 11vw;
+									width: 100%;
+									background-color: black;
+								}
+								p {
+									margin-top: 8px;
+									line-height: 1.35;
+								}
+								li {
+									border-style: none;
+									text-decoration: underline;
+								}
+						}
+						.advertisement {
+							width: 100%;
+								.img {
+									display: inline-block;
+									width: 45%;
+									height: 7vw;
+									background-color: pink;
+								}
+								.img1 {float: left;}
+								.img2 {float: right;}
+						}
+				}
+				h2 {
+					font: bold 22px Tahoma, sans-serif;
+					margin-top: 23px;
+					letter-spacing: -0.4px;
+				}
+				p {
+					font: 15px Arial, sans-serif;
+					letter-spacing: -1px;
+					color: #666666;
+					line-height: 1.46;
+					margin: 0px;
+				}
+				ul {
+					list-style-image: url("../img/marker.png");
+					padding: 15px;
+					margin: 0px;
+					margin-top: -11px;
+					 li {
+						border-top: 1px dotted #cacaca;
+						font: 15px Arial, sans-serif;
+						color: #007bc5;
+						padding: 3.5px;
+						letter-spacing: -0.8px;
+					 }
+				}
+		}
+		::-webkit-scrollbar {
+			width: 0px;
+		}
+}
+.footer {
+	background: $footer_bg;
+	height: $footer_height;
+		.gray {
+			width: 100%;
+			height: 67%;
+			position: relative;
+				.footer_logo {
+					position: absolute;
+					top: 20%;
+					left: 0;
+					width: 100%;
+					height: 80%;
+					background: url("../img/header.png");
+					background-size: 100%;
+					background-position: center;
+					background-repeat: no-repeat;
+					
+				}
+				.soc_seti {
+					position: absolute;
+					top: 45%;
+					right: 8%;
+					background: $footer_bg;
+					li {
+						padding-left: 0px;
+					}
+					.a_shape {
+						display: inline-block;
+						width: 3vw;
+						height: 3vw;
+						border-radius: 50%;
+						background: #8f949b;
+						color: #1e2735;
+						position: relative;
+							.fa_position {
+								position: absolute;
+								top: 22.27%;
+								left: 29%;
+								font-size: 1.6vw;
+							}
+							.fa-linkedin {
+								left: 20.23%;
+								background: #1e2735;
+								color: #8f949b;
+								padding: 0 6%;
+							}
+							.fa-envelope {
+								left: 24%;
+								top: 19%;
+							}
+							.fa-google-plus {
+								left: 16%;
+							}
+							.fa-youtube {
+								left: 22%;
+								top: 19%;
+								font-size: 1.9vw;
+							}
+					}
+				}
+		}
+		.dark {
+			width: 100%;
+			height: 33%;
+			background: #121821;
+			padding: 1.8% 15%;
+				p {
+					font-size: 1vw;
+					color: #56606b;
+					a {
+						text-decoration: underline;
+						color: #99a7b5;
+					}
+				}
+		}
+}

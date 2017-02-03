@@ -1,0 +1,42 @@
+// rating block with bacgkround
+
+.rating_block {
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $rating_block_bg;
+}
+
+// rating form
+
+.rating {
+    // need to change direction of stars to work correctly
+    direction: rtl;
+    input {
+        display: none;
+        &:checked {
+            // if input is checked, change sprite to active in all preceded label's
+            ~ .rating__star {
+                background-position: -33px -5px;
+            }
+        }
+    }
+}
+
+.rating__star {
+    width: 18px;
+    height: 16px;
+    background: url(../img/stars.png) no-repeat;
+    display: inline-block;
+    background-position: -5px -5px;
+    cursor: pointer;
+    float: right;
+    &:hover {
+        // when hover, change sprite to active in all preceded label's, and hover'ed element
+        background-position: -5px -31px!important;
+        ~ .rating__star {
+            background-position: -5px -31px!important;
+        }
+    }
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <title>task page</title>
+    <script src="js/task.js" defer></script>
+    <link href="css/primary.css" rel="stylesheet">
+</head>
+<body>
+   <!-- rating block -->
+    <div class="rating_block">
+       <!-- rating stars -->
+        <form class="rating" action="">
+            <input type="radio" name="rating" id="rating1">
+            <label for="rating1" class="rating__star"></label>
+            <input type="radio" name="rating" id="rating2">
+            <label for="rating2" class="rating__star"></label>
+            <input type="radio" name="rating" id="rating3">
+            <label for="rating3" class="rating__star"></label>
+            <input type="radio" name="rating" id="rating4">
+            <label for="rating4" class="rating__star"></label>
+            <input type="radio" name="rating" id="rating5">
+            <label for="rating5" class="rating__star"></label>    
+        </form>
+    </div>
+    <!-- image block with scroll -->
+    <div class="postcards">
+        <div class="postcards__tabs">
+            <div class="postcards__tabs__tab postcards__tabs__tab--active"><span>Открытки 1</span></div>
+            <div class="postcards__tabs__tab"><span>Открытки 2</span></div>
+            <div class="postcards__tabs__tab"><span>Открытки 3</span></div>
+        </div>
+        <div class="shadows">
+            <div id="shadowTop" class="shadow shadow--top"></div>
+            <div id="shadowBottom" class="shadow shadow--btm"></div>
+            <div id="scrollArea" class="postcards__content">
+            <!-- postcard content here -->
+                <form id="postcards1" action="#">
+                    <div class="postcards__content__imgblock">
+                        <input type="radio" name="postcard" id="postcard1">
+                        <label for="postcard1" class="postcards__content__imgblock__image"><img src="img/postcards/postcard1.png" alt="postcard_name"></label>
+                        <label for="postcard1" class="custom_radio"><div></div></label> 
+                    </div>
+                    <div class="postcards__content__imgblock">
+                        <input type="radio" name="postcard" id="postcard2">
+                        <label for="postcard2" class="postcards__content__imgblock__image"><img src="img/postcards/postcard1.png" alt="postcard_name"></label> 
+                        <label for="postcard2" class="custom_radio"><div></div></label> 
+                    </div>
+                    <div class="postcards__content__imgblock">
+                        <input type="radio" name="postcard" id="postcard3">
+                        <label for="postcard3" class="postcards__content__imgblock__image"><img src="img/postcards/postcard1.png" alt="postcard_name"></label>
+                        <label for="postcard3" class="custom_radio"><div></div></label>  
+                    </div>
+                    <div class="postcards__content__imgblock">
+                        <input type="radio" name="postcard" id="postcard4">
+                        <label for="postcard4" class="postcards__content__imgblock__image"><img src="img/postcards/postcard1.png" alt="postcard_name"></label> 
+                        <label for="postcard4" class="custom_radio"><div></div></label> 
+                    </div>
+                    <div class="postcards__content__imgblock">
+                        <input type="radio" name="postcard" id="postcard5">
+                        <label for="postcard5" class="postcards__content__imgblock__image"><img src="img/postcards/postcard1.png" alt="postcard_name"></label>
+                        <label for="postcard5" class="custom_radio"><div></div></label>  
+                    </div>
+                    <div class="postcards__content__imgblock">
+                        <input type="radio" name="postcard" id="postcard6">
+                        <label for="postcard6" class="postcards__content__imgblock__image"><img src="img/postcards/postcard1.png" alt="postcard_name"></label> 
+                        <label for="postcard6" class="custom_radio"><div></div></label> 
+                    </div>
+                    <div class="postcards__content__imgblock">
+                        <input type="radio" name="postcard" id="postcard7">
+                        <label for="postcard7" class="postcards__content__imgblock__image"><img src="img/postcards/postcard1.png" alt="postcard_name"></label> 
+                        <label for="postcard7" class="custom_radio"><div></div></label> 
+                    </div>
+                    <div class="postcards__content__imgblock">
+                        <input type="radio" name="postcard" id="postcard8">
+                        <label for="postcard8" class="postcards__content__imgblock__image"><img src="img/postcards/postcard1.png" alt="postcard_name"></label>
+                        <label for="postcard8" class="custom_radio"><div></div></label>  
+                    </div>
+                    <div class="postcards__content__imgblock">
+                        <input type="radio" name="postcard" id="postcard9">
+                        <label for="postcard9" class="postcards__content__imgblock__image"><img src="img/postcards/postcard1.png" alt="postcard_name"></label> 
+                        <label for="postcard9" class="custom_radio"><div></div></label> 
+                    </div>      
+                </form>
+            </div>
+        </div>
+        <div class="postcards__buttons">
+            <button type="submit" form="postcards1" class="postcards__buttons__button">Отправить</button>
+            <button type="reset" form="postcards1" class="postcards__buttons__button">Отмена</button>
+        </div>
+    </div>
+    <!-- notebook info block -->
+    <div class="pc_info">
+        
+    </div>
+</body>
+</html>

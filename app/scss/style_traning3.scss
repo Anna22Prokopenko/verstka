@@ -1,0 +1,205 @@
+@import "_normalize";
+$bg_nav: black;
+$bg_cnt: #ffffff;
+$border: 1px solid lighten(gray,40%);
+$bd_radius: 5px;
+$bg_aside: #f5f5f5;
+$bg_header: #f5f5f5;
+$bg_footer: black;
+$bg_input_more: #0c4fc9;
+$margin: 25px;
+$padding: 30px;
+$bg_wrapper: #eeeeee;
+$bg_trening_nav: #c776e8;
+
+$f_size: 15px;
+$font_family: Arial, sans-serif;
+$transition: all 0.3s ease-in-out;
+
+$base-columns-amount:16;
+
+@for $i from 1 through $base-columns-amount {
+	$minimum-column-width: 100%/$base-columns-amount;
+	.grd-step-column#{$i} {
+		width: $minimum-column-width*$i;	
+	}
+}
+
+@mixin linx ($link, $visit, $hover, $active) {
+	a {
+		color: $link;
+		text-decoration: none;
+		transition: $transition;
+		&:visited {
+			color: $visit;
+			text-decoration: none;
+		}
+		&:hover {
+			color: $hover;
+			text-decoration: none;
+		}
+		&:active {
+			color: $active;
+			text-decoration: none;
+		}
+	}
+}
+
+
+@mixin input ($height, $width, $bg, $liten) {
+	height: $height;
+	width: $width;
+	background: linear-gradient(to top, $bg, $liten);
+	border: 1px solid lighten(gray,40%);
+	border-radius: $bd_radius; 
+	&:hover {
+		border: 1px solid lighten(blue,40%);
+	}
+	
+}
+html {
+	height: 100%;
+	
+	
+}
+body {
+	height: inherit;
+	
+}
+.wrapper {
+	width: 1200px;
+	height: inherit;
+	background: $bg_wrapper;
+	margin: 0 auto;
+	border: 2px solid red;
+}
+
+.nav {
+background: $bg_nav;
+height: 5%;
+font-size: 0;
+	[class*="grd-step-column"]{
+	display: inline-block;
+	vertical-align: top;
+	font-size: 16px;
+	text-align: center;
+	box-sizing: border-box;
+	line-height: 46px;
+	@include linx(#eeeeee, #eeeeee, #ffffff, red);
+		&:hover {
+			background: #ae37df;
+		}
+	}
+}
+.cnt {
+	height: 85%;
+}
+.parent1 {
+	background: white;
+	font-size: 0;
+	display: inline-flex;
+	padding: 30px;
+		[class*="grd-step-column"]{
+		vertical-align: top;
+		font-size: 16px;
+		box-sizing: border-box;
+		border: 1px solid red;
+		}	
+		.grd-step-column4 {
+			margin-right: 30px;
+			background: $bg_aside;
+			border: $border;
+			border-radius: $bd_radius;
+			font: $f_size $font_family;
+				ul {
+				padding: 0px;
+				list-style: none;
+					.sidebar {
+						padding-top: 5px;
+						padding-bottom: 5px;
+						padding-left: 40px;
+						}
+					@include linx(blue, black, white, red);
+					a {
+						display: block;
+						padding-left: 40px;
+						padding-top: 2px;
+						padding-bottom: 2px;
+						&:hover {
+						background: lighten(#0c52c9,30%);
+						}
+					}
+				}
+			}
+		.grd-step-column12 {
+			background: $bg_header;
+			height: 300px;
+			border: $border;
+			border-radius: $bd_radius;
+			font: $f_size $font_family;
+			padding: $padding;
+			line-height: 1.5;
+			h1 {
+				font: bold $f_size + 30 $font_family;
+				margin-bottom: -10px;
+			}
+			button {
+				@include input(50px, 150px, #b8b8b9, #e0e0e4);
+				color: white;
+				&:hover {
+					@include input(50px, 150px, #0c52c9, #81aaf1);
+				}
+			}
+		}
+}
+.parent2 {
+	background: white;
+	font-size: 0;
+	padding: 30px;
+	display: flex;
+	margin-top: -120px;
+		[class*="grd-step-column"] {
+				vertical-align: top;
+				font-size: 16px;
+				box-sizing: border-box;
+				}
+		.grd-step-column4 {
+			margin-right: 30px;
+		}
+}
+.par2 {
+	display: flex;
+	font-size: 0;
+	justify-content: space-between;
+		[class*="grd-step-column"] {
+				vertical-align: top;
+				font-size: 16px;
+				box-sizing: border-box;
+				border: 1px solid red;
+				height: 380px;
+				background: $bg_aside;
+				border: $border;
+				border-radius: $bd_radius;
+				font: $f_size $font_family;
+				padding: 10px;
+					article {
+					height: 330px;
+					overflow: scroll;
+						h2 {
+						font: bold $f_size + 10 $font_family;
+						margin: 0px 0px -7px 0px;
+						}
+					}
+					button {
+					@include input(30px, 120px, #b8b8b9, #e0e0e4);
+					color: white;
+						&:hover {
+							@include input(30px, 120px, #0c52c9, #81aaf1);
+						}
+					}	
+				}
+}
+footer {
+	height: 10%;
+	background: $bg_footer;
+}

@@ -1,0 +1,22 @@
+{
+  "name": "resume_project",
+  "description": "",
+  "main": "index.js",
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "kendo-ui": "latest",
+    "jquery": "latest",
+	"bootstrap": "latest",
+	"font-awesome": "latest",
+	"animate.css": "latest",
+	"angular": "latest"
+  }
+}

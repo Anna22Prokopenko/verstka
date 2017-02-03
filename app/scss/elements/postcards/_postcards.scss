@@ -1,0 +1,204 @@
+// postcards container
+
+.postcards {
+    display: flex;
+    flex-flow: row wrap;
+    max-width: 670px;
+    margin: auto;
+    padding: 55px 0;
+}
+
+// tabs swithing styles
+
+.postcards__tabs {
+    font-size: 1.4em;
+    display: inline-flex;
+    flex-flow: inherit;
+}
+
+.postcards__tabs__tab {
+    padding: 10px 55px 7px 12px;
+    background: $tabs_bg;
+    color: #fff;
+    flex-grow: 1;
+    cursor: pointer;
+    &:hover {
+        background: lighten($tabs_bg, 20%);
+        color: #fff;
+    }
+}
+
+.postcards__tabs__tab--active {
+    background: #fff;
+    color: $tabs_bg;
+    box-shadow: 0px 1px 0px 0px #fff,
+            -1px -1px 0px 0px #cbd1d9,
+            1px -1px 0px 0px #cbd1d9;
+    z-index: 10;
+    &:hover {
+        background: #fff;
+        color: $tabs_bg;
+    }
+}
+
+// main postcard content
+
+.postcards__content {
+    max-height: 520px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    flex-basis: 100%;
+    padding: 40px 15px 25px 40px;
+    box-shadow: 0px 0px 0px 1px #cbd1d9;
+    position: relative;
+    // custom scrollbar
+    &::-webkit-scrollbar {
+        width: 15px;
+    }
+    // scrollbar background 
+    &::-webkit-scrollbar-track {
+        border-radius: 10px;
+        background: #e6e9ec;
+    }
+    // scrollbar button background
+    &::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        background: $main_red;
+        position: relative;
+        background-image: url('../img/scrollbar_sprite.png');
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    form {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        align-items: flex-start;
+    }
+}
+
+// shadows
+
+.shadows {
+    position: relative;
+}
+
+.shadow {
+    box-shadow: 0px 50px 100px 35px #ffffff;
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    z-index: 5;
+    opacity: 0;
+    @include transition;
+}
+
+.shadow--top {
+    left: 0;
+    top: 0;
+}
+
+.shadow--btm {
+    box-shadow: 0px -50px 100px 35px #ffffff;
+    left: 0;
+    bottom: 0;
+}
+
+// postcard's img block with radio button and image
+
+.postcards__content__imgblock {
+    flex-basis: 30%;
+    position: relative;
+    margin-bottom: 30px;
+    label {
+        img {
+            width: 100%;
+        }
+    }
+    input {
+        position: absolute;
+        left: 30px;
+        top: 30px;
+        visibility: hidden;
+        &:checked {
+            ~ .custom_radio {
+                div {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+// custom radio button
+
+.custom_radio {
+    position: absolute;
+    left: 25px;
+    top: 25px;
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: inset 0px 3px 0px 0px #cccccc;
+    div {
+        width: 12px;
+        height: 12px;
+        background: $main_red;
+        border-radius: 50%;
+        box-shadow: inset -2px -3px 0px 0px rgba(204, 204, 204, 0.34);
+        margin-left: 4px;
+        margin-top: 4px;
+        opacity: 0;
+    }
+}
+
+
+// media for img block
+
+@media screen and (max-width:600px) {
+    .postcards__content__imgblock {
+        flex-basis: 40%;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .postcards__content__imgblock {
+        flex-basis: 90%;
+    }
+}
+
+// send and cancel buttons
+
+.postcards__buttons {
+    margin-top: 50px;
+    font-size: 2.6em;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
+.postcards__buttons__button {
+    cursor: pointer;
+    padding: 15px 32px;
+    background: #7c8ca0;
+    border: 0;
+    color: #fff;
+    margin-right: 35px;
+    &:hover {
+        background: $main_red;
+    }
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+// disable margin right
+
+@media screen and (max-width: 400px) {
+    .postcards__buttons__button {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+} 

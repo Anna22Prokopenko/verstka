@@ -1,0 +1,43 @@
+@mixin boxshadow {
+    transform: translate(-3px, -3px);
+    box-shadow: 3px 3px 0px 0px rgba(0, 0, 0, 0.9);
+}
+
+@mixin shadowtranslate {
+    transform: translate(-5px, -5px);
+}
+
+@mixin buttonactions {
+    transform: translate(-3px, -3px);
+    box-shadow: 3px 3px 0px 0px rgba(0, 0, 0, 0.9);
+    &:hover {
+        transform: translate(-5px, -5px);
+        box-shadow: 5px 5px 0px 0px rgba(0, 0, 0, 0.9);
+    }
+    &:active {
+        transform: translate(-1px, -1px);
+        box-shadow: 1px 1px 0px 0px rgba(0, 0, 0, 0.9);
+    }
+    &:focus {
+        transform: translate(-1px, -1px);
+        box-shadow: 1px 1px 0px 0px rgba(0, 0, 0, 0.9);
+    }
+}
+
+@mixin buttonactions_nofocus {
+    transform: translate(-3px, -3px);
+    box-shadow: 3px 3px 0px 0px rgba(0, 0, 0, 0.9);
+    &:hover {
+        transform: translate(-5px, -5px);
+        box-shadow: 5px 5px 0px 0px rgba(0, 0, 0, 0.9);
+    }
+    &:active {
+        transform: translate(-1px, -1px);
+        box-shadow: 1px 1px 0px 0px rgba(0, 0, 0, 0.9);
+    }
+}
+
+@mixin transition {
+-webkit-transition: 0.7s all ease-in-out;
+transition: 0.7s all ease-in-out;
+}

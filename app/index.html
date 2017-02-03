@@ -1,0 +1,319 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>My project</title>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+		<link rel="stylesheet" type="text/css" href="css/style_sport.css"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<link href='https://fonts.googleapis.com/css?family=Play:400,700' rel='stylesheet' type='text/css'>
+		<script src="js/carusel.js" defer></script>
+		<script src="js/table.js" defer></script>
+		<script src="js/script.js" defer></script>
+		<script defer type="text/javascript" src="../libs/jquery/dist/jquery.js"></script>
+		<script src="js/perehod.js" defer></script>
+	</head>
+	<body>
+		<header>
+			<div class="wrap container-fluid">
+				<div class="wrap __xs  row text-center">
+					<div class="links outline col-lg-3 col-md-3 col-sm-3 col-xs-3"><a href="#gallary">GALLERY</a></div>
+					<div class="links outline col-lg-2 col-md-2 col-sm-2 col-xs-2"><a href="#slider_img">SLIDER</a></div>
+					<div class="links outline col-lg-2 col-md-2 col-sm-2 col-xs-2"><a href="#catalog">CATALOG</a></div>
+					<div class="links outline col-lg-2 col-md-2 col-sm-2 col-xs-2"><a href="#about_us">ABOUT US</a></div>
+					<div class="links outline col-lg-3 col-md-3 col-sm-3 col-xs-3"><a href="#contacts">CONTACTS</a></div>
+				</div>
+				<div class="row text-center">
+					<div class="logo col-lg-4 col-lg-offset-4 col-md-4 col-md-offset-4 col-sm-4 col-sm-offset-4 hidden-xs">
+						<img class="img-responsive" src="img/logo_3.gif" alt="Logo" title="Главная"/>
+					</div>
+				</div>
+				<div class="row visible-xs-block text-center">
+					<div class="logo col-xs-4 col-xs-offset-4"><img class="img-responsive" src="img/logo_4.gif" alt="Logo" title="Главная"/></div>
+				</div>
+			</div>
+		</header>
+		<section class="cnt container-fluid">
+			<div class="row">
+				<div class="promo_picture col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-12">
+					<img class="img-responsive" src="img/photo-2.png" alt="Promo"/>
+				</div>
+			</div>
+			<div id="gallary" class="gallary row">
+				<div class="mask col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-12">
+					<p class="promo_text text-center"><strong>OUR PROJECTS</strong></p>
+					<div class="img_cnt row">
+						<div class="col-lg-6  col-md-6 col-sm-6 col-xs-6"><img class="img-responsive" src="img/gym-595597_1920.png"/></div>
+						<div class="col-lg-6  col-md-6 col-sm-6 col-xs-6"><img class="img-responsive" src="img/gym-room-1178293_1920.png"/></div>
+					</div>
+					<div class="img_cnt row">
+						<div class="col-lg-6  col-md-6 col-sm-6 col-xs-6"><img class="img-responsive" src="img/gym-1046961_1920.png"/></div>
+						<div class="col-lg-6  col-md-6 col-sm-6 col-xs-6"><img class="img-responsive" src="img/machines-91849_1280.png"/></div>
+					</div>
+					
+				</div>
+			</div>
+			<!--
+			<div class="row">
+				<div class=" galary col-lg-4 col-lg-offset-2 col-md-4 col-md-offset-2 col-sm-4 col-sm-offset-2 col-xs-6"><img class="img-responsive" src="img/gym-595597_1920.png"/></div>
+				<div class="gallary col-lg-4  col-md-4 col-sm-4 col-xs-6"><img class="img-responsive" src="img/gym-room-1178293_1920.png"/></div>
+			</div>
+			<div class="row">
+				<div class="gallary col-lg-4 col-lg-offset-2 col-md-4 col-md-offset-2 col-sm-4 col-sm-offset-2 col-xs-6"><img class="img-responsive" src="img/gym-1046961_1920.png"/></div>
+				<div class="gallary col-lg-4  col-md-4 col-sm-4 col-xs-6"><img class="img-responsive" src="img/machines-91849_1280.png"/></div>
+			</div>
+			-->
+			<div id="slider_img" class="carusel row">
+				<div  class="first_arrow col-lg-2 col-lg-offset-2 col-md-2 col-md-offset-2 col-sm-2 col-sm-offset-2 col-xs-4">
+					<p class="discount_text text-center"><a href="#">discount</a></p>
+					<img class="img-responsive" src=""/>
+					<figcaption class="slider_title text-center"></figcaption>
+					<div id="left_arrow" class="left"></div>
+					<span id="left_arrow" class="arrow"></span>
+				</div>
+				<div  class="first_arrow col-lg-2  col-md-2 col-sm-2 col-xs-4">
+					<p class="discount_text text-center"><a href="#">discount</a></p>
+					<img class="img-responsive" src=""/>
+					<figcaption class="slider_title text-center"></figcaption>
+				</div>
+				<div class="last_arrow col-lg-2  col-md-2 col-sm-2 col-xs-4">
+					<p class="discount_text text-center"><a href="#">discount</a></p>
+					<img class="img-responsive" src=""/>
+					<figcaption class="slider_title text-center"></figcaption>
+					<div id="right_arrow1" class="right hidden-lg hidden-md hidden-sm"></div>
+					<span id="right_arrow1" class="arrow2 hidden-lg hidden-md hidden-sm"></span>
+				</div>
+				<div class="last_arrow col-lg-2  col-md-2 col-sm-2 hidden-xs">
+					<p class="discount_text text-center"><a href="#">discount</a></p>
+					<img class="img-responsive" src=""/>
+					<figcaption class="slider_title text-center"></figcaption>
+					<div id="right_arrow" class="right"></div>
+					<span id="right_arrow" class="arrow2"></span>
+				</div>
+			</div>
+			<div id="catalog" class="tab row">
+				<div class="head col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-12">
+					<p class="text-center"><strong>CATALOG</strong></p>
+				</div>
+				<div class="col-lg-6 col-lg-offset-2 col-md-6 col-md-offset-2 col-sm-6 col-sm-offset-2 col-xs-8">
+					<table id="table" class="table table-condensed">
+						<!-- <tr>
+							<td>Vigor XPL500</td>
+							<td class="td_center"><span class="glyphicon glyphicon-plus"></span></td>
+							<td class="td_center"><span class="glyphicon glyphicon-minus"></span></td>
+						</tr>
+						<tr>
+							<td>Vigor XPL700</td>
+							<td class="td_center"><span class="glyphicon glyphicon-plus"></span></td>
+							<td class="td_center"><span class="glyphicon glyphicon-minus"></span></td>
+						</tr>
+						<tr>
+							<td>FitLogic ET1403</td>
+							<td class="td_center"><span class="glyphicon glyphicon-plus"></span></td>
+							<td class="td_center"><span class="glyphicon glyphicon-minus"></span></td>
+						</tr>
+						<tr>
+							<td>Torneo Inita (T-150)</td>
+							<td class="td_center"><span class="glyphicon glyphicon-plus"></span></td>
+							<td class="td_center"><span class="glyphicon glyphicon-minus"></span></td>
+						</tr>
+						<tr>
+							<td>Torneo Nova (B-225)</td>
+							<td class="td_center"><span class="glyphicon glyphicon-plus"></span></td>
+							<td class="td_center"><span class="glyphicon glyphicon-minus"></span></td>
+						</tr>
+						<tr>
+							<td>Torneo Nova (B-225)</td>
+							<td class="td_center"><span class="glyphicon glyphicon-plus"></span></td>
+							<td class="td_center"><span class="glyphicon glyphicon-minus"></span></td>
+						</tr>
+						<tr>
+							<td>Torneo Nova (B-225)</td>
+							<td class="td_center"><span class="glyphicon glyphicon-plus"></span></td>
+							<td class="td_center"><span class="glyphicon glyphicon-minus"></span></td>
+						</tr> -->
+					</table>
+				</div>
+				<div class="img_items col-lg-2  col-md-2 col-sm-2 col-xs-4">
+					
+				</div>
+				<div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-12">
+					<nav id="paginator">
+					  <!-- <ul class="pagination pagination-sm">
+						<li>
+						  <a href="#" aria-label="Previous">
+							<span aria-hidden="true">&laquo;</span>
+						  </a>
+						</li>
+						<li class="active"><a href="#">1</a></li>
+						<li><a href="#">2</a></li>
+						<li><a href="#">3</a></li>
+						<li><a href="#">4</a></li>
+						<li><a href="#">5</a></li>
+						<li>
+						  <a href="#" aria-label="Next">
+							<span aria-hidden="true">&raquo;</span>
+						  </a>
+						</li>
+					  </ul> -->
+					</nav>
+				</div>
+			</div>
+			<div id="about_us" class="row">
+				<div class="head col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-12">
+					<p class="text-center"><strong>ABOUT US</strong></p>
+				</div>
+				<div class="about_us col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-12">
+					
+					<div class="img_about col-lg-5 col-md-5 hidden-sm hidden-xs">
+						<img class="img-responsive" src="img/aboutUs_2.png" alt="Our team"/>
+					</div>
+					<div class="img_about hidden-lg hidden-md col-sm-6 col-sm-offset-3 col-xs-6 col-xs-offset-3">
+						<img class="img-responsive" src="img/aboutUs_2.png"/>
+					</div>
+					
+					<div class="text col-lg-7  col-md-7 col-sm-12 col-xs-12">
+						<p class="text-justify">
+							Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+							Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+							when an unknown printer took a galley of type and scrambled it to make a type 
+							specimen book. It has survived not only five centuries, but also the leap into
+							electronic typesetting, remaining essentially unchanged. 
+							Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+							when an unknown printer took a galley of type and scrambled it to make a type 
+							specimen book. It has survived not only five centuries, but also the leap into
+							electronic typesetting, remaining essentially unchanged.
+						</p>
+					</div>
+				</div>
+				
+			</div>
+			<div id="contacts">
+				<div class="row">
+					<div class="head col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-12">
+					<p class="text-center"><strong>CONTACTS</strong></p>
+				</div>
+					<div id="map" class="map_style col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-12">
+						
+					</div>
+					<!-- <div id="cd-zoom-in"></div>
+					<div id="cd-zoom-out"></div>
+					<address>86-90 Paul Street, London, EC2A 4NE</address> -->
+				</div>
+				<div class="row">
+					<div class="contacts col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-12">
+						<form class="form1" action="">
+							<input type="checkbox" name="header" id="header" class="input_radio">
+							<label for="header" class="formHeader"><h3><img src="img/message261.png"/>Напишите нам письмо</h3></label>
+							<div class="wrapper_form">
+								<div class="bodyForm">
+									<div class="name">
+										<label for="name">Ваше имя:</label>
+										<input placeholder="имя" type="text" id="name"/>
+									</div>
+									<div class=clearfix></div>
+									<div class="password">	
+										<label for="password">Ваш E-MAIL:</label> 
+										<input placeholder="e-mail" type="password" id="password"/>
+									</div>
+									<div class=clearfix></div>
+									<div class="select">
+										<label for="select">Тема письма:</label> 
+											<select>
+													<option>-выбрать тему-</option>
+													<option>1</option>
+													<option>2</option>
+													<option>3</option>
+											<select/> 
+									</div>
+									<div class=clearfix></div>
+									<div class="textarea">
+											<label for="textarea">Сообщение:</label> 
+											<textarea  id="textarea" placeholder="Введите сообщение">
+											</textarea>
+									</div>
+									<div class=clearfix></div>
+									<p>Введите капчу и нажмите "отправить"</p>
+									<div class="kapcha">
+										<label for="text">9+18=</label> <input type="text" id="text"/> 
+									</div>
+									<div class=clearfix></div>
+								</div>
+								<div class="end">
+									<div class="button">
+										<input class="send" type="button" value="ОТПРАВИТЬ"/>
+										<input class="clear" type="reset" value="ОЧИСТИТЬ"/>
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</section>
+		<footer class="footer_wrap row">
+			<div class="footer_links col-lg-4 col-lg-offset-2 col-md-4 col-md-offset-2 col-sm-4 col-sm-offset-2 col-xs-6">
+				<div class="footer_Links_wrapper">
+					<ul class="in_line">
+						<li class="link">
+							<div  class="item hover_effect">
+								<span class="soc_sety soc_img1"></span>
+								<a href="https://www.facebook.com" target="_blank" class="soc_sety soc_img2 hov_icon"></a>
+							</div>
+						</li>
+						<li class="link">
+							<div  class="item hover_effect">
+								<span class="soc_sety soc_img3"></span>
+								<a href="https://www.tumblr.com" target="_blank" class="soc_sety soc_img4 hov_icon"></a>
+							</div>
+						</li>
+						<li class="link">
+							<div  class="item hover_effect">
+								<span class="soc_sety soc_img5"></span>
+								<a href="https://twitter.com" target="_blank" class="soc_sety soc_img6 hov_icon"></a>
+							</div>
+						</li>
+						<li class="link">
+							<div  class="item hover_effect">
+								<span class="soc_sety soc_img7"></span>
+								<a href="https://vk.com" target="_blank" class="soc_sety soc_img8 hov_icon"></a>
+							</div>
+						</li>
+						<li class="link">
+							<div  class="item hover_effect">
+								<span class="soc_sety soc_img9"></span>
+								<a href="https://ok.ru" target="_blank" class="soc_sety soc_img10 hov_icon"></a>
+							</div>
+						</li>
+						<li class="link">
+							<div  class="item hover_effect">
+								<span class="soc_sety soc_img11"></span>
+								<a href="https://www.linkedin.com" target="_blank" class="soc_sety soc_img12 hov_icon"></a>
+							</div>
+						</li>
+						<li class="link">
+							<div  class="item hover_effect">
+								<span class="soc_sety soc_img13"></span>
+								<a href="https://www.skype.com" target="_blank" class="soc_sety soc_img14 hov_icon"></a>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="footer_anchors col-lg-4 col-md-4 col-sm-4 col-xs-6">
+				<div class="footer_anchors_wrapper">
+					<span class="anchor1"><a href=#gallary>GALLERY</a></span>
+					<span class="anchor2"><a href=#slider_img>SLIDER</a></span>
+					<span class="anchor3"><a href=#catalog>CATALOG</a></span>
+					<span class="anchor4"><a href=#about_us>ABOUT US</a></span>
+					<span class="anchor5"><a href=#contacts>CONTACTS</a></span>
+				</div>
+			</div>
+			<div class="footer_empty col-lg-2 col-md-2 col-sm-2"></div>
+		</footer>
+		
+		
+		<!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCpIBBBVSLoYDWaPIT49-uvOyUzhTMZuas"></script> -->
+		<script async defer src="https://maps.googleapis.com/maps/api/js?callback=initMap"></script>
+	</body>
+
+</html>
